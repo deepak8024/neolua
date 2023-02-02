@@ -5,9 +5,10 @@ local cmd = vim.cmd
 -- cmd('syntax on')
 
 -- Better editor UI
+--
 o.number = true
 o.numberwidth = 2
-o.relativenumber = true
+o.relativenumber = false
 o.cursorline = false
 
 -- Better editing experience
@@ -33,7 +34,7 @@ o.mouse = nicr
 o.termguicolors = true
 o.background = 'dark' -- or light if you want light mode
 cmd('colorscheme gruvbox')
-g.airline_theme = 'base16_gruvbox_dark_medium'
+--g.airline_theme = 'base16_gruvbox_dark_medium'
 
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 8
@@ -64,6 +65,12 @@ o.splitkeep = 'screen'
 --vim.opt.diffopt:append('linematch:60')
 
 -- Map <leader> to space
-g.mapleader = " "
-g.maplocalleader = " "
+g.mapleader = ' '
+g.maplocalleader = ' '
 
+-- mapping <Esc> for normal mode while terminal session
+cmd [[
+    :tnoremap <Esc> <C-\><C-n>
+
+
+]]

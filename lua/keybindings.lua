@@ -1,15 +1,15 @@
 
 -----------------------------------------------------------------------------------------------------------VIM COMMANDS------------------------------------------------------------------------------------------
-vim.cmd [[
-    :tnoremap <Esc> <C-\><C-n>
-]]
 
 ------------------------------------------------------------------------------------------------------------ KEYMAPPING -------------------------------------------------------------------------------------------------------------------
 local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = true })
 end
 -- terminal shortcut 
-map('n', '<Leader>tt', ':vnew term://bash<CR>')
+--
+
+map('n', '<SPACE>', '<Nop>')
+
 
 
 --split navigation
@@ -35,15 +35,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 
-vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
-map('n', 'gd', ':lua vim.lsp.buf.definition()<cr>')
-map('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>')
-map('n', 'gi', ':lua vim.lsp.buf.implementation()<cr>')
-map('n', 'K', ':lua vim.lsp.buf.hover()<cr>')
-map('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<cr>')
-map('n', '<leader>af', ':lua vim.lsp.buf.code_action()<cr>')
-map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
-
 
 
 
@@ -66,5 +57,4 @@ map('n', '<leader>W', '<CMD>wall<CR>')
 
 map('n', '<leader>e', ':NvimTreeToggle<CR>')
 
-
-
+map('n', '<Leader>tt', ':vnew term://bash<CR>')

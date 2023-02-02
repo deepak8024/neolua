@@ -7,25 +7,14 @@
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
     use 'arcticicestudio/nord-vim'
-
     use 'ellisonleao/gruvbox.nvim'
-
     use "lunarvim/darkplus.nvim"
-
-
     use 'windwp/nvim-autopairs'
-
-
     use 'nvim-tree/nvim-web-devicons' --optional, for file icons
     use 'nvim-tree/nvim-tree.lua'
-
     use 'nvim-lualine/lualine.nvim'
-
-
-
-
+    use 'akinsho/toggleterm.nvim'
 
 
     use {
@@ -40,7 +29,6 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
-
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'

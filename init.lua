@@ -1,5 +1,4 @@
+
+require('config')
 require('keybindings')
 require('packages')
-require('config')
-
-
